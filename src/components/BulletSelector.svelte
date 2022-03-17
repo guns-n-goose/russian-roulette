@@ -1,5 +1,5 @@
 <script>
-	let chambers = [{id: "1", class: "deg-0", selected: false}, 
+	let chambers = [{id: "1", class: "deg-0", selected: true}, 
 					{id: "2", class: "deg-60", selected: false}, 
 					{id: "3", class: "deg-120", selected: false}, 
 					{id: "4", class: "deg-180", selected: false}, 
@@ -8,7 +8,7 @@
 	let loaded = false;
 
 
-	let selected = 0;
+	let selected = 1;
 	
 
 	const load = chamber => {
@@ -24,14 +24,31 @@
 				on:click={() => {chamber.selected = !chamber.selected; selected = chamber.selected ? selected+1 : selected-1;}}
 			></button>
 	{/each}
+	{#if selected == 6}
+	<div class="death">
+		<img src="images/sugar-skull-1782019.svg" alt="Instant death">
+		<h2 style="position:relative; right:-300px; top:-150px;">Are you suicidal, mate?</h2>
+	</div>
+	{:else if selected == 0}
+	<div class="death">
+		<h2 style="position:relative; right:300px; top:-150px;">Scared, are we?</h2>
+	</div>
+	{:else}
+	<button class="stripe">Ready</button>
+	{/if}	
 </div>
+
 
 
 <style>
 	:global(body){
         background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");
     }
-
+	
+	h2 {
+    font-size: 2em;
+    font-family: 'Shadows Into Light';
+  }
 	.roll {
 		position: relative;
 		top: -100px;
@@ -70,7 +87,12 @@
 	line-height:100px;
 	}
 
-
+	.death {
+		position:relative; 
+		top:100px; 
+		right:-120px; 
+		width:70px; 
+	}
 
 	.deg-0 {
 	transform:translate(100px)
@@ -95,4 +117,27 @@
 	.deg-300 {
 	transform:rotate(300deg) translate(100px) rotate(-300deg);
 	}
+
+	.stripe {
+		border-radius: 40px;
+		position: relative;
+		font-size: 3em;
+    	font-family: 'Shadows Into Light';
+		right: 500px;
+		top: 100px;
+		height: 100px;
+		width: 200px;
+		border: 2px solid #000000;
+		color: #000000;
+		background-image: repeating-linear-gradient(90deg, 
+			rgba(20, 25, 25, 0.6),
+			rgba(25, 25, 25, 0.6) 10%, 
+			#4c4c4c 10%, #4c4c4c 20%);
+		background-size: 100%;
+		transition: background 0.3s ease-in-out;
+		}
+
+	.stripe:hover {
+		background-position: 150px;
+		}
 </style>

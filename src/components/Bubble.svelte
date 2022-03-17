@@ -29,7 +29,7 @@
 	}
 	
 	rect, path {
-		fill: var(--fill-color, rgb(255, 255, 255));
+		fill: var(--fill-color, rgba(255, 255, 255, 0));
         stroke: #000000;
         stroke-width: 3px;
         stroke-linejoin: round;

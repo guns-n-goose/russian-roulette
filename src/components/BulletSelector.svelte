@@ -28,6 +28,9 @@
 
 
 <style>
+	:global(body){
+        background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");
+    }
 
 	.roll {
 		position: relative;

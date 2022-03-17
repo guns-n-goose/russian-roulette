@@ -1,13 +1,16 @@
 <script>
-  import Home from "@/components/Home.svelte";
   import { fade } from "svelte/transition";
+  import Pirate from "components/Pirate.svelte"
 
   let name = "World";
+  let orientation = "bottom left"
 </script>
 
-<main transition:fade>
-  <Home {name} />
+<main class="w-full h-full" transition:fade>
+  <Pirate></Pirate>
+
 </main>
+
 
 <style>
   main {
@@ -21,5 +24,10 @@
     main {
       max-width: none;
     }
+  }
+
+  h2 {
+    font-size: 2em;
+    font-family: 'Shadows Into Light';
   }
 </style>

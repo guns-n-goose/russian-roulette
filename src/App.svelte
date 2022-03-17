@@ -1,16 +1,26 @@
 <script>
   import { fade } from "svelte/transition";
-  import Pirate from "components/Pirate.svelte"
+  import Bubble from "components/Bubble.svelte"
+  import BulletSelector from "./components/BulletSelector.svelte";
 
   let name = "World";
   let orientation = "bottom left"
 </script>
 
 <main class="w-full h-full" transition:fade>
-  <Pirate></Pirate>
+  <div class="Pirate">
+    <img src="images/pirate-3123711.svg" alt="Pirate" style="display:block; width:300px; margin-left:auto; margin-right:auto; margin-top:80px;"/>
+      <div class="w-full h-full" style="position:relative; top:-425px; right:-780px; width:300px; height:100px;">
+        <Bubble
+          --place-self={'start'}>
+            <h2>How much do you dare?</h2>
+        </Bubble>
+      </div>
+  </div>
+  <BulletSelector/>
+
 
 </main>
-
 
 <style>
   main {

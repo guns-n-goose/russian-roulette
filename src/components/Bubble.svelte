@@ -13,7 +13,6 @@
 		
         <path d="M{tickSize*2},{Height} h-{tickSize} v{tickSize} Z"/>
 	</svg>
-	
 	<slot/>
 </div>
 

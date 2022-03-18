@@ -41,9 +41,6 @@
 
 
 <style>
-	:global(body){
-        background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");
-    }
 	
 	h2 {
     font-size: 2em;
@@ -51,8 +48,6 @@
   }
 	.roll {
 		position: relative;
-		top: -100px;
-		right: -550px;
 		background: rgb(75, 84, 87);
 		border-radius: 50%;
 		width: 300px;
@@ -123,8 +118,7 @@
 		position: relative;
 		font-size: 3em;
     	font-family: 'Shadows Into Light';
-		right: 500px;
-		top: 100px;
+		right: 200px;
 		height: 100px;
 		width: 200px;
 		border: 2px solid #000000;

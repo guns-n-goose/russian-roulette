@@ -9,6 +9,7 @@
 
 	bullets.set(1);
 	
+	
 </script>
 
 <div class="roll">

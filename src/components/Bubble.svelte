@@ -7,7 +7,7 @@
     let Height = 100
 </script>
 
-<div class="bubble" transition:scale={{easing: elasticInOut, duration: 1500}}>
+<div class="bubble" >
 	<svg width={Width} height={Height} viewBox="0 0 {Width} {Height}">
 		<rect x=0 y=0 width={Width} height={Height} rx=5/>
 		

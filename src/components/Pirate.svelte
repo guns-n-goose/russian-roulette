@@ -13,20 +13,20 @@
 </div>
 
 <style>
-h2 {
-    font-size: 2em;
-    font-family: 'Shadows Into Light';
-  }
+  h2 {
+      font-size: 2em;
+      font-family: 'Shadows Into Light';
+    }
 
   .bubble {
-		border-radius: 40px;
-		position: relative;
-		right: -300px;
+    border-radius: 40px;
+    position: relative;
+    right: -300px;
     top: -500px;
-		background-size: 100%;
-		}
+    background-size: 100%;
+    }
 
-  
+
   .text {
     right: -10px;
   }

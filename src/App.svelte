@@ -1,9 +1,11 @@
 <script>
   import BulletSelector from "./components/BulletSelector.svelte";
+  import Goose from "./components/Goose.svelte";
   import Pirate from "./components/Pirate.svelte";
   import { bullets, state } from './store.js';
+  import { fly } from 'svelte/transition';
+  import Shoot from "./components/Shoot.svelte";
 
-  let name = "World";
   let orientation = "bottom left"
 </script>
 
@@ -22,9 +24,21 @@
       </div>
     </div>
   {/if}
+  {#if $state == 2}
+  <div>
+      <Shoot/>
+  </div> 
+  {/if}
+  {#if $state == 1}
+  <div>
+    <div class="h-full w-full grid">
+      <Goose/>
+    </div>
+  </div> 
+  {/if}
 
 
-  
+
 </div>
 
 <style>

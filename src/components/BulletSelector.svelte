@@ -41,7 +41,7 @@
 	h2 {
     font-size: 2em;
     font-family: 'Shadows Into Light';
-  }
+ 	}
 	.roll {
 		position: relative;
 		background: rgb(75, 84, 87);

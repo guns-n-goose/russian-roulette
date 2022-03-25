@@ -1,6 +1,4 @@
 <script>
-	import { scale } from 'svelte/transition'
-	import { elasticInOut } from 'svelte/easing'
 	export let tickSize = 24
 	
 	let Width = 300

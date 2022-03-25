@@ -1,6 +1,6 @@
-import App from "./App.svelte";
+import RussianRoulette from "./RussianRoulette.svelte";
 
-const app = new App({
+const app = new RussianRoulette({
   target: document.querySelector("#__snel"),
   props: {},
 });

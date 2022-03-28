@@ -71,7 +71,7 @@
   }
 </script>
 
-<div class="w-screen h-screen grid">
+<div class="w-full h-full grid">
   {#if $state == 0}
     <div class="w-1/2 h-full place-self-center">
       <div class="w-full h-1/2 grid">

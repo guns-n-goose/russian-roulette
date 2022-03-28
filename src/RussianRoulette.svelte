@@ -25,18 +25,17 @@
   
   let goose = true;
   let roll = [];
-  for (let i = 1; i <= 6; i++) {
-      if (b > 0){
-          roll.push(1);
-          b--;
-          roll = roll;
-      }
-      else {
-          roll.push(0);
-          roll = roll;
-      }
-  }
 
+  for (let i = 1; i <= 6; i++) {
+    if (b > 0){
+        roll.push(1);
+        b--;
+    }
+    else {
+        roll.push(0);
+    }
+}
+  
   function shoot() {
       roll = roll;
       var idx = Math.floor(Math.random() * roll.length);
@@ -48,6 +47,22 @@
       else {
           earnings.update(n => n + 100 * 1);
       }
+  }
+
+  function update_roll(chamber_is_selected) {
+
+    if (chamber_is_selected) {
+      let idx = roll.indexOf(0);
+      roll[idx] = 1;
+
+      bullets.update(n => n + 1)
+    }
+    else {
+      let idx = roll.indexOf(1);
+      roll[idx] = 0;
+
+      bullets.update(n => n - 1)
+    }
   }
 
   function endgame() {
@@ -65,7 +80,7 @@
             {#each chambers as chamber}
                 <button class="{chamber.selected ? 'loaded '+ chamber.class : 'empty ' + chamber.class}"
                   on:click={() => {chamber.selected = !chamber.selected; 
-                           bullets.update(n => chamber.selected ? n+1 : n-1)}}
+                           update_roll(chamber.selected)}}
                 ></button>
             {/each}
             {#if $bullets == 6}

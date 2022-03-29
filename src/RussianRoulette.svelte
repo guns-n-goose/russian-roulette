@@ -18,8 +18,8 @@
   let Height = 100
   
   const dispatch = createEventDispatcher();
-  const looseEvent = () => { dispatch('loose') };
-  const winEvent = () => { dispatch('win', { earnings }) };
+  const looseEvent = () => { dispatch('loose', { amount: 'all' }) };
+  const winEvent = () => { dispatch('win', { amount: $earnings }) };
   
   let b = $bullets;
   

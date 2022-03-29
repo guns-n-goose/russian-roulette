@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Russian Roulette</title>
+</svelte:head>
+
 <script>
   import { fly } from 'svelte/transition';
   import { createEventDispatcher } from 'svelte';

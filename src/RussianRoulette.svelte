@@ -22,7 +22,7 @@
   let Height = 100
   
   const dispatch = createEventDispatcher();
-  const looseEvent = () => { dispatch('loose', { amount: 'all' }) };
+  const loseEvent = () => { dispatch('lose', { amount: 'all' }) };
   const winEvent = () => { dispatch('win', { amount: $earnings }) };
   
   let b = $bullets;
@@ -46,7 +46,7 @@
       if (roll[idx] == 1) {
           kill.set(1);
           earnings.set(0);
-          looseEvent();
+          loseEvent();
       }
       else {
           earnings.update(n => n + 100 * 1);

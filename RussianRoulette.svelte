@@ -246,7 +246,7 @@
     .bubble {
     border-radius: 40px;
     position: relative;
-    right: -500px;
+    right: -300px;
     top: -700px;
     background-size: 100%;
     }

@@ -95,7 +95,7 @@
             </div>
             {:else if $bullets == 0}
             <div class="death">
-              <h2 style="position:relative; right:300px; top:-150px;">Scared, are we?</h2>
+              <h2 style="position:relative; right:-300px; top:-150px;">Scared, are we?</h2>
             </div>
             {:else}
             <button class="stripe" 

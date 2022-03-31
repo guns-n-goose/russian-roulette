@@ -91,11 +91,11 @@
             {#if $bullets == 6}
             <div class="death">
               <img src="https://raw.githubusercontent.com/guns-n-goose/russian-roulette-game/v.0.2/public/images/sugar-skull-1782019.svg" alt="Instant death">
-              <h2 style="position:relative; right:-300px; top:-150px;">Are you suicidal, mate?</h2>
+              <h2 style="position:relative; right:300px; top:-150px;">Are you suicidal, mate?</h2>
             </div>
             {:else if $bullets == 0}
             <div class="death">
-              <h2 style="position:relative; right:-300px; top:-150px;">Scared, are we?</h2>
+              <h2 style="position:relative; right:300px; top:-150px;">Scared, are we?</h2>
             </div>
             {:else}
             <button class="stripe" 

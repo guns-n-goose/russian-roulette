@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Russian Roulette</title>
+</svelte:head>
+
 <script>
   import { fly } from 'svelte/transition';
   import { createEventDispatcher } from 'svelte';
@@ -18,8 +22,8 @@
   let Height = 100
   
   const dispatch = createEventDispatcher();
-  const looseEvent = () => { dispatch('loose') };
-  const winEvent = () => { dispatch('win', { earnings }) };
+  const loseEvent = () => { dispatch('lose', { amount: 'all' }) };
+  const winEvent = () => { dispatch('win', { amount: $earnings }) };
   
   let b = $bullets;
   
@@ -42,7 +46,7 @@
       if (roll[idx] == 1) {
           kill.set(1);
           earnings.set(0);
-          looseEvent();
+          loseEvent();
       }
       else {
           earnings.update(n => n + 100 * 1);
@@ -72,7 +76,7 @@
   }
 </script>
 
-<div class="w-screen h-screen grid">
+<div class="w-full h-full grid">
   {#if $state == 0}
     <div class="w-1/2 h-full place-self-center">
       <div class="w-full h-1/2 grid">

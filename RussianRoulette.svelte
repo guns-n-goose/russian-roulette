@@ -68,6 +68,7 @@
   function endgame() {
       goose = false;
       winEvent();
+      
   }
 </script>
 
@@ -101,7 +102,7 @@
       </div>
       <div class="w-full h-1/2 grid">
         <div class="h-1/2 place-self-center">
-          <div class="h-1/2 absolute bottom-0">
+          <div class="h-1/2 absolute bottom-0 right-20">
             <img class="h-full relative" src="https://raw.githubusercontent.com/guns-n-goose/russian-roulette-game/v.0.2/public/images/pirate-3123711.svg" alt="Pirate"/>
             <div class="relative h-1/2 bubble">
               <div class="bubble2" >
